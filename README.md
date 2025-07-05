@@ -2,7 +2,6 @@
 
 **Cosmic Chronicle** is an interactive and educational React-based web application designed for space enthusiasts. It brings together data from NASA and The Space Devs APIs to allow users to explore historical space events and enjoy visual and interactive astronomy content — all within a clean, responsive interface.
 
-
 ## 🛠 Installation and Setup Instructions
 
 To run this project locally:
@@ -15,10 +14,10 @@ To run this project locally:
 
 4. Open the integrated terminal and run the following command to install all dependencies:
 
-   npm install
+   npm install:
 Once installation is complete, start the development server with:
 
-   npm start
+   npm start:
 Your app should open in your browser.
 
 ### 🌟 Website Functionality and Unique Features:
