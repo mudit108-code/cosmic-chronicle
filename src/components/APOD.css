@@ -1,0 +1,18 @@
+.apod-section {
+  color: white;
+  background-color: #0b0f2f;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.2);
+}
+
+.apod-section h2 {
+  color: #ffdb4d;
+}
+
+.apod-section img,
+.apod-section iframe {
+  margin-top: 1rem;
+  max-width: 100%;
+  border-radius: 8px;
+}
