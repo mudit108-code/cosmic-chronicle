@@ -9,12 +9,11 @@ const Timeline = ({ selectedDate, setSelectedDate }) => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const selectedMonth = selectedDate.getMonth() + 1;
-  const selectedDay = selectedDate.getDate();
+  const selectedMonth = selectedDate.getUTCMonth();
+  const selectedDay = selectedDate.getUTCDate();
 
   const handleDateChange = (date) => {
-    const normalized = new Date(2000, date.getMonth(), date.getDate());
-    setSelectedDate(normalized);
+    setSelectedDate(date); // no normalization, keep real date
   };
 
   const fetchAllPages = useCallback(async (url, type) => {
@@ -58,12 +57,12 @@ const Timeline = ({ selectedDate, setSelectedDate }) => {
 
         const filteredLaunches = allLaunches.filter((launch) => {
           const d = new Date(launch.net);
-          return d.getDate() === selectedDay && d.getMonth() + 1 === selectedMonth;
+          return d.getUTCDate() === selectedDay && d.getUTCMonth() === selectedMonth;
         });
 
         const filteredEvents = allEvents.filter((event) => {
           const d = new Date(event.date);
-          return d.getDate() === selectedDay && d.getMonth() + 1 === selectedMonth;
+          return d.getUTCDate() === selectedDay && d.getUTCMonth() === selectedMonth;
         });
 
         setLaunches(filteredLaunches);
